@@ -206,3 +206,50 @@ minetest.register_craft({
 		{"group:stick"}
 	}
 })
+
+--
+-- Armor
+--
+
+minetest.register_craft({
+	output = "topaz_items:helmet",
+	recipe = {
+		{"topaz_items:topaz_ingot", "topaz_items:topaz_ingot", "topaz_items:topaz_ingot"},
+		{"topaz_items:topaz_ingot", "", "topaz_items:topaz_ingot"}
+	}
+})
+
+minetest.register_craft({
+	output = "topaz_items:chestplate",
+	recipe = {
+		{"topaz_items:topaz_ingot", "", "topaz_items:topaz_ingot"},
+		{"topaz_items:topaz_ingot", "topaz_items:topaz_ingot", "topaz_items:topaz_ingot"},
+		{"topaz_items:topaz_ingot", "topaz_items:topaz_ingot", "topaz_items:topaz_ingot"}
+	}
+})
+
+minetest.register_craft({
+	output = "topaz_items:leggings",
+	recipe = {
+		{"topaz_items:topaz_ingot", "topaz_items:topaz_ingot", "topaz_items:topaz_ingot"},
+		{"topaz_items:topaz_ingot", "", "topaz_items:topaz_ingot"},
+		{"topaz_items:topaz_ingot", "", "topaz_items:topaz_ingot"}
+	}
+})
+
+minetest.register_craft({
+	output = "topaz_items:boots",
+	recipe = {
+		{"topaz_items:topaz_ingot", "", "topaz_items:topaz_ingot"},
+		{"topaz_items:topaz_ingot", "", "topaz_items:topaz_ingot"}
+	}
+})
+
+minetest.register_craft({
+	output = "topaz_items:shield",
+	recipe = {
+		{"topaz_items:topaz_ingot", "topaz_items:topaz_ingot", "topaz_items:topaz_ingot"},
+		{"topaz_items:topaz_ingot", "topaz_items:topaz_ingot", "topaz_items:topaz_ingot"},
+		{"", "topaz_items:topaz_ingot", ""}
+	}
+})
