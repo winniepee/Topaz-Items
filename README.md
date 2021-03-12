@@ -7,7 +7,7 @@ The following things that are need to be finish:
 1. **Ore/Lump** (✔ Done)
 2. **Tools** (✔ Done)
 3. **Craftings** (❗ WIP)
-4. **Armors** (❌ Not Working)
+4. **Armors** (✔ Done)
 5. **Few Things That I IDK** (❓ Need Helps)
 
 Screenshot:
