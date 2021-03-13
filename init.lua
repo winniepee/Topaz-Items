@@ -96,6 +96,21 @@ minetest.register_tool("topaz_items:sword_topaz", {
 	groups = {sword = 1}
 })
 
+---------
+--Stair--
+---------
+
+if minetest.get_modpath("stairs") then
+	stairs.register_stair_and_slab(
+		"topazblock",
+		"topaz_items:topazblock",
+		{cracky = 2, level = 2},
+		{"topaz_items_topaz_block.png"},
+		"Topaz Stair",
+		"Topaz Slab"
+	)
+end
+
 -----------
 -- Armor --
 -----------
@@ -210,46 +225,47 @@ minetest.register_craft({
 --
 -- Armor
 --
+if minetest.get_modpath("3d_armor") then
+	minetest.register_craft({
+		output = "topaz_items:helmet",
+		recipe = {
+			{"topaz_items:topaz_ingot", "topaz_items:topaz_ingot", "topaz_items:topaz_ingot"},
+			{"topaz_items:topaz_ingot", "", "topaz_items:topaz_ingot"}
+		}
+	})
 
-minetest.register_craft({
-	output = "topaz_items:helmet",
-	recipe = {
-		{"topaz_items:topaz_ingot", "topaz_items:topaz_ingot", "topaz_items:topaz_ingot"},
-		{"topaz_items:topaz_ingot", "", "topaz_items:topaz_ingot"}
-	}
-})
+	minetest.register_craft({
+		output = "topaz_items:chestplate",
+		recipe = {
+			{"topaz_items:topaz_ingot", "", "topaz_items:topaz_ingot"},
+			{"topaz_items:topaz_ingot", "topaz_items:topaz_ingot", "topaz_items:topaz_ingot"},
+			{"topaz_items:topaz_ingot", "topaz_items:topaz_ingot", "topaz_items:topaz_ingot"}
+		}
+	})
 
-minetest.register_craft({
-	output = "topaz_items:chestplate",
-	recipe = {
-		{"topaz_items:topaz_ingot", "", "topaz_items:topaz_ingot"},
-		{"topaz_items:topaz_ingot", "topaz_items:topaz_ingot", "topaz_items:topaz_ingot"},
-		{"topaz_items:topaz_ingot", "topaz_items:topaz_ingot", "topaz_items:topaz_ingot"}
-	}
-})
+	minetest.register_craft({
+		output = "topaz_items:leggings",
+		recipe = {
+			{"topaz_items:topaz_ingot", "topaz_items:topaz_ingot", "topaz_items:topaz_ingot"},
+			{"topaz_items:topaz_ingot", "", "topaz_items:topaz_ingot"},
+			{"topaz_items:topaz_ingot", "", "topaz_items:topaz_ingot"}
+		}
+	})
 
-minetest.register_craft({
-	output = "topaz_items:leggings",
-	recipe = {
-		{"topaz_items:topaz_ingot", "topaz_items:topaz_ingot", "topaz_items:topaz_ingot"},
-		{"topaz_items:topaz_ingot", "", "topaz_items:topaz_ingot"},
-		{"topaz_items:topaz_ingot", "", "topaz_items:topaz_ingot"}
-	}
-})
+	minetest.register_craft({
+		output = "topaz_items:boots",
+		recipe = {
+			{"topaz_items:topaz_ingot", "", "topaz_items:topaz_ingot"},
+			{"topaz_items:topaz_ingot", "", "topaz_items:topaz_ingot"}
+		}
+	})
 
-minetest.register_craft({
-	output = "topaz_items:boots",
-	recipe = {
-		{"topaz_items:topaz_ingot", "", "topaz_items:topaz_ingot"},
-		{"topaz_items:topaz_ingot", "", "topaz_items:topaz_ingot"}
-	}
-})
-
-minetest.register_craft({
-	output = "topaz_items:shield",
-	recipe = {
-		{"topaz_items:topaz_ingot", "topaz_items:topaz_ingot", "topaz_items:topaz_ingot"},
-		{"topaz_items:topaz_ingot", "topaz_items:topaz_ingot", "topaz_items:topaz_ingot"},
-		{"", "topaz_items:topaz_ingot", ""}
-	}
-})
+	minetest.register_craft({
+		output = "topaz_items:shield",
+		recipe = {
+			{"topaz_items:topaz_ingot", "topaz_items:topaz_ingot", "topaz_items:topaz_ingot"},
+			{"topaz_items:topaz_ingot", "topaz_items:topaz_ingot", "topaz_items:topaz_ingot"},
+			{"", "topaz_items:topaz_ingot", ""}
+		}
+	})
+end
